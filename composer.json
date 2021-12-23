@@ -1,0 +1,32 @@
+{
+  "name": "crastos/assets",
+  "description": "Asset management for Laravel and Acorn",
+  "type": "library",
+  "require": {
+    "illuminate/support": "^8.0||^9.0",
+    "illuminate/collections": "^8.0||^9.0",
+    "illuminate/contracts": "^8.0||^9.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Roots\\Acorn\\Assets\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "QWp6t",
+      "email": "hi@qwp6t.me"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Roots\\Acorn\\Assets\\AssetsServiceProvider"
+      ]
+    }
+  }
+}
