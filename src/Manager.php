@@ -70,13 +70,11 @@ class Manager
             $manifest = public_path("{$manifestDirectory}/mix-manifest.json");
         }
 
-        $assets = $this->manifest($manifestDirectory ?: '__mix__', [
+        return $this->manifest($manifestDirectory ?: '__mix__', [
             'path' => public_path($manifestDirectory),
-            'url' => config('app.mix_url'),
+            'url' => config('app.mix_url') ?: '',
             'assets' => $manifest,
-        ]);
-
-        return $assets[$path];
+        ])->asset($path);
     }
 
     /**
