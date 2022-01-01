@@ -72,7 +72,7 @@ class Manager
 
         return $this->manifest($manifestDirectory ?: '__mix__', [
             'path' => public_path($manifestDirectory),
-            'url' => config('app.mix_url') ?: '',
+            'url' => config('app.mix_url', '') . $manifestDirectory,
             'assets' => $manifest,
         ])->asset($path);
     }
